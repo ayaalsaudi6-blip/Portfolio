@@ -1,0 +1,163 @@
+/* 1. Basic Reset - الأساس النظيف */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1A1A1A; /* الخلفية السوداء المطفيّة */
+    color: #B2BEC3;            /* لون النصوص المريح */
+    line-height: 1.6;
+}
+
+/* 2. Navigation - شريط التنقل المعدّل للألوان الليليّة */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #2D2D2D; /* رمادي غامق جداً للبار */
+    position: sticky;          /* يبقى ثابتاً عند التمرير - Don't Make Me Think */
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;            /* روابط بيضاء واضحة */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00B894;            /* يتغير للأخضر الزمردي */
+}
+
+/* 3. Hero Section - الواجهة الترحيبية */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #00B894;            /* تخصصك يظهر باللون الأخضر المميز */
+    margin-bottom: 30px;
+}
+
+/* الزر الأساسي الفخم */
+.btn {
+    background-color: #00B894;
+    color: #1A1A1A;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #55EFC4; /* درجة أفتح عند اللمس */
+}
+
+/* 4. Sections Styling - تنسيق الأقسام العامة */
+section {
+    padding: 80px 10% ;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    border-left: 5px solid #00B894; /* علامة مميزة بجانب العناوين */
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+/* 5. Skills - تنسيق المهارات */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #2D2D2D;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+/* 6. Projects Grid - شبكة المشاريع */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* تعديل بسيط للمرونة */
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #2D2D2D;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: all 0.3s ease; /* تعديل ليشمل كل الحركات */
+}
+
+.project-card:hover {
+    border-color: #00B894;
+    transform: translateY(-5px); /* حركة خفيفة للأعلى تعطي لمسة تفاعلية */
+}
+
+/* تنسيق الصورة المضافة */
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.project-card h3 {
+    color: #00B894;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #CCCCCC; /* لون أفتح للنصوص الجانبية */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.project-card a {
+    color: #FFFFFF;
+    margin-right: 15px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 7. Footer - التذييل */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #111;
+    margin-top: 50px;
+}
