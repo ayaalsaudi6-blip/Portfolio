@@ -1,163 +1,361 @@
-/* 1. Basic Reset - الأساس النظيف */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
-    background-color: #1A1A1A; /* الخلفية السوداء المطفيّة */
-    color: #B2BEC3;            /* لون النصوص المريح */
-    line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.4s ease;
 }
 
-/* 2. Navigation - شريط التنقل المعدّل للألوان الليليّة */
 nav ul {
-    display: flex;
     list-style: none;
-    justify-content: center;
-    gap: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
     padding: 20px;
-    background-color: #2D2D2D; /* رمادي غامق جداً للبار */
-    position: sticky;          /* يبقى ثابتاً عند التمرير - Don't Make Me Think */
-    top: 0;
-    z-index: 1000;
+    background-color: var(--nav-bg); 
+    transition: background 0.4s;
 }
 
 nav a {
     text-decoration: none;
-    color: #FFFFFF;            /* روابط بيضاء واضحة */
-    font-weight: bold;
-    transition: 0.3s;
+    color: var(--text-muted); 
 }
 
 nav a:hover {
-    color: #00B894;            /* يتغير للأخضر الزمردي */
+    color: #38BDF8;
 }
 
-/* 3. Hero Section - الواجهة الترحيبية */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
 .hero {
-    height: 90vh;
+    padding: 60px;
+}
+
+.hero-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 20px;
+    justify-content: space-between;
+    gap: 40px;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    color: #FFFFFF;
-    margin-bottom: 10px;
+.hero-text h1 {
+    color: var(--text-color); 
+    font-size: 2.5rem;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: #00B894;            /* تخصصك يظهر باللون الأخضر المميز */
-    margin-bottom: 30px;
+.hero-text p {
+    color: #38BDF8;
 }
 
-/* الزر الأساسي الفخم */
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38BDF8;
+}
+
 .btn {
-    background-color: #00B894;
-    color: #1A1A1A;
-    padding: 12px 30px;
+    background-color: #38BDF8;
+    color: #0F172A;
+    padding: 12px 25px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 50px;
     font-weight: bold;
-    transition: transform 0.3s, background-color 0.3s;
+    display: inline-block;
+    margin-top: 15px;
 }
 
 .btn:hover {
-    transform: scale(1.1);
-    background-color: #55EFC4; /* درجة أفتح عند اللمس */
+    background-color: #0EA5E9;
 }
 
-/* 4. Sections Styling - تنسيق الأقسام العامة */
-section {
-    padding: 80px 10% ;
-    max-width: 1200px;
-    margin: 0 auto;
+.hero-btns {
+    display: flex;
+    gap: 15px; 
+    margin-top: 25px;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #38BDF8; 
+    color: #38BDF8;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #38BDF8;
+    color: #0F172A; 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
 }
 
 h2 {
-    font-size: 2rem;
-    color: #FFFFFF;
-    border-left: 5px solid #00B894; /* علامة مميزة بجانب العناوين */
-    padding-left: 15px;
-    margin-bottom: 30px;
+    color: #F8FAFC;
+    margin-top: 40px;
 }
 
-/* 5. Skills - تنسيق المهارات */
-.skills-list {
+.about-list {
+    padding-left: 20px;
+}
+
+.about-list li {
+    margin-bottom: 8px;
+}
+
+.skills-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    list-style: none;
+    margin-top: 10px;
 }
 
-.skills-list li {
-    background-color: #2D2D2D;
-    color: #FFFFFF;
-    padding: 8px 20px;
-    border-radius: 5px;
-    border: 1px solid #333;
+.skill-box {
+    background-color: #1E293B;
+    color: #38BDF8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s; 
+    cursor: default;
+    border: 1px solid transparent;
 }
 
-/* 6. Projects Grid - شبكة المشاريع */
+.skill-box:hover {
+    backgroun    color: #0F172A;
+    color: var(--text-color);;
+    transform: translateY(-5px); 
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3); 
+}
+
+#certifications {
+    padding: 60px; 
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #94A3B8;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.certs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.cert-card {
+    background-color: var(--card-bg); 
+    border: 1px solid var(--border-color);
+    overflow: hidden; /
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px); 
+    border-color: #38BDF8; 
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15); 
+}
+
+.highlight-cert {
+    border: 2px solid #38BDF8;
+}
+
+.cert-img-container {
+    width: 100%;
+    height: 200px; 
+    background-color: #0F172A; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.cert-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+.cert-info h3, h3 {
+    color: var(--text-color);
+    color: var(--text-muted);
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cert-info h3 {
+    color: #F8FAFC; 
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+}
+
+.cert-info p.issuer {
+    color: #38BDF8; 
+    font-size: 0.9rem;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.cert-info p.date {
+    color: #94A3B8; 
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+
+@media (max-width: 480px) {
+    #certifications {
+        padding: 30px;
+    }
+    .cert-img-container {
+        height: 150px;
+    }
+
+    .hero-btns {
+        flex-direction: column; 
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .btn, .btn-outline {
+        text-align: center;
+        width: 100%; 
+    }
+}
+
+:root {
+    --bg-color: #0F172A;
+    --nav-bg: #020617;
+    --text-color: #F8FAFC;      
+    --text-muted: #94A3B8;     
+    --card-bg: #1E293B;
+    --accent-color: #38BDF8;
+    --border-color: #334155;
+}
+
+.light-theme {
+    --bg-color: #F1F5F9;
+    --nav-bg: #FFFFFF;
+    --text-color: #1E293B;      
+    --text-muted: #475569;     
+    --card-bg: #FFFFFF;
+    --accent-color: #0284C7;
+    --border-color: #CBD5E1;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-color); 
+    transition: color 0.3s ease;
+}
+
+.section-subtitle, .issuer, .date, p, li {
+    color: var(--text-muted); 
+    transition: color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.4s ease, color 0.4s ease; 
+}
+
+.cert-card, .skill-box, .project-card {
+    background-color: var(--card-bg);
+    transition: background 0.4s ease;
+}
+
+.theme-btn {
+    background: none;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px 8px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1); 
+}
+
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* تعديل بسيط للمرونة */
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .project-card {
-    background-color: #2D2D2D;
-    padding: 25px;
+    background-color: #1E293B;
+    padding: 20px;
     border-radius: 10px;
-    border: 1px solid #333;
-    transition: all 0.3s ease; /* تعديل ليشمل كل الحركات */
+    transition: 0.3s;
 }
 
 .project-card:hover {
-    border-color: #00B894;
-    transform: translateY(-5px); /* حركة خفيفة للأعلى تعطي لمسة تفاعلية */
+    transform: translateY(-8px);
 }
 
-/* تنسيق الصورة المضافة */
 .project-card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 15px 0;
+    border-radius: 10px;
 }
 
-.project-card h3 {
-    color: #00B894;
+.project-description {
+    margin: 10px 0;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+}
+
+.links a {
+    border: 1px solid #38BDF8;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.links a:hover {
+    background-color: #38BDF8;
+    color: #0F172A;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--nav-bg);
+    color: var(--text-muted);
+}
+
+.icons-container {
     margin-bottom: 10px;
 }
 
-.project-card p {
-    color: #CCCCCC; /* لون أفتح للنصوص الجانبية */
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.project-card a {
-    color: #FFFFFF;
-    margin-right: 15px;
-    font-size: 0.9rem;
+.icons-container a {
+    margin: 0 10px;
+    color: #38BDF8;
     text-decoration: none;
-    font-weight: 500;
-}
-
-/* 7. Footer - التذييل */
-footer {
-    text-align: center;
-    padding: 40px;
-    background-color: #111;
-    margin-top: 50px;
 }
