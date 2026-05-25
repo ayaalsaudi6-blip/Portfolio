@@ -6,68 +6,74 @@
     <title>Aya Alsaudi | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <button id="theme-toggle" class="theme-btn" title="Toggle Dark/Light Mode">
-        <span id="theme-icon">☀️</span> </button>
+    <nav class="container">
+        <div class="logo">Aya.A</div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">
+                <span id="theme-icon">☀️</span>
+            </button>
+        </div>
     </nav>
 </header>
 
+<main class="container">
 
 <section class="hero">
     <div class="hero-content">
-
         <div class="hero-text">
-            <h1>Hi, I'm Aya </h1>
-            <p>Front-End Developer • Software Engineering</p>
-            <a href="#projects" class="btn">View My Work</a>
-            <a href="assets/Aya-Alsaudi-CV.pdf" download class="btn-outline">Download CV</a>        </div>
-
+            <h1>Hi, I'm Aya</h1>
+            <p>Full Stack Developer crafting modern web apps with great user experience</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn-outline">Hire Me</a>
+            </div>
+        </div>
         <div class="hero-image">
             <img src="images/your-photo.jpg" alt="Aya Alsaudi">
         </div>
-
     </div>
 </section>
 
-
-<section id="about">
+<section id="about" class="section-padding">
     <h2>About Me</h2>
-
-    <ul class="about-list">
-        <li>Front-End Developer</li>
-        <li>Focused on responsive and clean UI</li>
-        <li>Interested in Cyber Security</li>
-        <li>Build user-friendly web experiences</li>
-    </ul>
+    <p class="about-text">
+        I am a Full Stack Developer focused on building responsive and user-friendly web applications. 
+        I combine strong frontend skills with UX thinking to create smooth and efficient user experiences. 
+        I also have a background in cybersecurity, which helps me build secure and reliable systems.
+    </p>
 </section>
 
+<section class="section-padding">
+    <h2>What I Do</h2>
+    <div class="skills-container">
+        <div class="skill-box">Build Responsive Web Apps</div>
+        <div class="skill-box">Integrate APIs</div>
+        <div class="skill-box">Improve UI/UX</div>
+        <div class="skill-box">Optimize Performance</div>
+    </div>
+</section>
 
-<section id="skills">
+<section id="skills" class="section-padding">
     <h2>Technical Skills</h2>
-
     <div class="skills-container">
         <div class="skill-box">HTML5 & CSS3</div>
         <div class="skill-box">Git & GitHub</div>
         <div class="skill-box">Flutter</div>
         <div class="skill-box">Figma</div>
-        <div class="skill-box">Cyber Security (JODDB)</div>
-        <div class="skill-box">Network Security</div>
-        <div class="skill-box">Ethical Hacking Fundamentals</div>
+        <div class="skill-box">Cyber Security</div>
+        <div class="skill-box">Responsive Design</div>
     </div>
 
-    <h2>Soft Skills</h2>
-
+    <h2 style="margin-top:40px;">Soft Skills</h2>
     <div class="skills-container">
         <div class="skill-box">Problem Solving</div>
         <div class="skill-box">Communication</div>
@@ -76,115 +82,104 @@
     </div>
 </section>
 
-<section>
-    <h2>What I Can Do</h2>
-    <ul class="about-list">
-        <li>Build responsive websites</li>
-        <li>Convert Figma designs to code</li>
-        <li>Optimize website performance</li>
-    </ul>
-</section>
-
-<section id="certifications">
-    <h2>Certifications & Learning Journey</h2>
-    <p class="section-subtitle">Demonstrating continuous learning and a strong foundation in key tech areas.</p>
-    
-    <div class="certs-container">
-        
-                <div class="cert-card highlight-cert">
-                <div class="cert-img-container">
-                <img src="images/cyber-shield-cert.png" alt="Cybersecurity Upskilling Program Certificate - Cyber Shield Academy">
-            </div>
-            <div class="cert-info">
-                <h3>Cybersecurity Upskilling Program</h3>
-                <p class="issuer">Cyber Shield Academy</p>
-                <p class="date">Jul 2024 - Sep 2024</p>
-            </div>
-        </div>
-
-                <div class="cert-card">
-                <div class="cert-img-container">
-                <img src="images/linux-cert.png" alt="Linux 101 Course Certificate - IEEE CS BAU Student Branch">
-            </div>
-                <div class="cert-info">
-                <h3>Linux 101 Course</h3>
-                <p class="issuer">IEEE CS BAU Student Branch</p>
-            </div>
-        </div>
-
-                <div class="cert-card">
-                <div class="cert-img-container">
-                <img src="images/hr-agility-cert.png" alt="Talent Management & HR Agility Workshop Certificate - HCD Mena">
-        </div>
-                <div class="cert-info">
-                <h3>Talent Management & HR Agility</h3>
-                <p class="issuer">HCD Mena & ACTD</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<section id="projects">
-    <h2>Featured Projects</h2>
+<section id="certifications" class="section-padding">
+    <h2>Certifications</h2>
 
     <div class="projects-container">
 
-        <div class="project-card">
-            <h3>Faz3a Project (فزعة)</h3>
+        <div class="cert-card">
+            <img src="images/cyber-shield-cert.png">
+            <h3>Cybersecurity Upskilling</h3>
+            <p>Cyber Shield Academy (JODDB)</p>
+        </div>
 
-            <img src="images/faz3a-logo.jpg" alt="Faz3a Project">
+        <div class="cert-card">
+            <img src="images/hr-agility-cert.png">
+            <h3>HR Agility & Talent</h3>
+            <p>HCD Mena</p>
+        </div>
 
-            <p class="project-description">
-                A platform that connects users with essential services in Jordan.
-            </p>
-
-            <div class="links">
-                <a href="#">Live Demo</a>
-                <a href="#">GitHub</a>
-            </div>
+        <div class="cert-card">
+            <img src="images/linux-cert.png">
+            <h3>Linux 101</h3>
+            <p>IEEE BAU</p>
         </div>
 
     </div>
 </section>
 
+<section id="projects" class="section-padding">
+    <h2>Featured Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Faz3a Platform</h3>
+            <img src="images/faz3a-logo.jpg" alt="Faz3a Platform">
+            <p class="project-description">
+                A service platform that connects users with essential services in Jordan, 
+                designed to improve user experience and simplify navigation. 
+                Includes API integration and responsive design.
+            </p>
+            <div class="links">
+                <a href="#" class="btn-outline">Live Demo</a>
+                <a href="#" class="btn-outline">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Fake Store E-Commerce</h3>
+            <img src="images/fake-store-logo.jpg" alt="Fake Store Project">
+            <p class="project-description">
+                A dynamic e-commerce catalog featuring real-time data fetching via Fetch API, scalable client-side pagination, instant search filtering, and user session state persistence using localStorage.
+            </p>
+            <div class="links">
+                <a href="https://ayaalsaudi6-blip.github.io/fakestore/" target="_blank" class="btn-outline">Live Demo</a>
+                <a href="https://github.com/ayaalsaudi6-blip/fakestore.git" target="_blank" class="btn-outline">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Caffe-Z Page</h3>
+            <img src="images/caffe-z-logo.jpg" alt="Caffe-Z Project">
+            <p class="project-description">
+                A modern, fully responsive premium coffee shop landing page built with semantic HTML5, modern CSS Grid/Flexbox layouts, a manual dark mode toggle, and an interactive table reservation system.
+            </p>
+            <div class="links">
+                <a href="https://ayaalsaudi6-blip.github.io/Booking-Website/" target="_blank" class="btn-outline">Live Demo</a>
+                <a href="https://github.com/ayaalsaudi6-blip/Booking-Website" target="_blank" class="btn-outline">GitHub</a>
+            </div>
+        </div>
+    </div>
+</section> 
+
+</main>
 
 <footer id="contact">
-    <h2>Let's Connect</h2>
-
-    <div class="icons-container">
-        <a href="https://github.com/ayaalsaudi6-blip" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/aya-alsaudi-3a60b733b" target="_blank">LinkedIn</a>
+    <div class="container">
+        <h2>Let's Work Together</h2>
+        <div class="icons-container">
+            <a href="https://github.com/ayaalsaudi6-blip" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/aya-alsaudi-3a60b733b" target="_blank">LinkedIn</a>
+        </div>
+        <p>© 2026 Aya Alsaudi</p>
     </div>
-
-    <p>© 2026 Aya Alsaudi. Built with HTML & CSS.</p>
 </footer>
 
 <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const body = document.body;
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const body = document.body;
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('light-theme');
-        
-        if (body.classList.contains('light-theme')) {
-            themeIcon.textContent = '🌙'; 
-        } else {
-            themeIcon.textContent = '☀️'; 
-        }
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    const isLight = body.classList.contains('light-theme');
+    themeIcon.textContent = isLight ? '🌙' : '☀️';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
 
-        const currentTheme = body.classList.contains('light-theme') ? 'light' : 'dark';
-        localStorage.setItem('selected-theme', currentTheme);
-    });
-
-    // كود إضافي: التحقق من اختيار المستخدم القديم عند فتح الصفحة
-    const savedTheme = localStorage.getItem('selected-theme');
-    if (savedTheme === 'light') {
-        body.classList.add('light-theme');
-        themeIcon.textContent = '🌙';
-    }
+if(localStorage.getItem('theme') === 'light'){
+    body.classList.add('light-theme');
+    themeIcon.textContent = '🌙';
+}
 </script>
 
 </body>
